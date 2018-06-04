@@ -1,15 +1,16 @@
 export function toFahrenheit(degrees) {
-  //Check for faulty values
+  //Check for bad types of parameters
   if (typeof degrees !== "number" && typeof degrees !== "string") {
     return NaN;
-  } else if (degrees === Infinity || degrees < -273.15) {
+  //Check for value limits
+  } else if (degrees < -273.15 || degrees > Number.MAX_SAFE_INTEGER) {
     return NaN;
   } else {
-    return Number(degrees) * 9/5 + 32;
+    return degrees * 9/5 + 32;
   }
 }
 
-/*instructions (swedish):
+/*Instructions (swedish):
 toFahrenheit(degrees) är en funktion som ska ta ett tal som motsvarar en temperatur
 i grader Celsius och returnera motsvarande temperatur i grader Fahrenheit.
 Om parametern är ett tal som motsvarar en giltig temperatur så ska funktionen
