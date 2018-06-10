@@ -1,0 +1,46 @@
+Rapport för https://github.com/aengman/Lab_34_jest_test/tree/aengman
+
+Frågor:
+1. Har ni testat samma saker?
+2. Om ni har missat något testfall som de andra täckte in - varför tänkte ni inte på det?
+   Hur kan man tänka för att inte missa sådana fall i framtiden?
+3. Vilka är de viktigaste testfallen?
+
+1 Temperaturomvandling
+  1. Båda har testat: sträng med siffror, minsta gränsvärde både tillåtet och otillåtet,
+     sträng med bokstäver, undefined, Infinity och tillåtet number.
+
+     Utöver detta har vi med test för: otillåtet högsta gränsvärde, otillåtet typvärde bool,
+     nummer med decimaler
+
+  2. Vi har ej missat något som aengman tagit med.
+
+  3. Viktigaste testfallen är enligt vår åsikt att testa tillåtna värden och test
+     med strängar och siffror för att kolla vilka strängar som är okej och inte.
+     Gränsvärden är också viktiga i denna funktion.
+
+
+2 Körkort
+  1. Båda har testat: Olika typer på parametrar för att hitta dåliga parametrar. Båda har även testat lägsta gränsvärde.
+
+  2. Vi har missat att testa lowercase strängar. Svårt att förklara varför vi missade att tänka på det. Kan vara bra att
+     hitta eller göra en lista på de vanligaste sakerna som bör testas för olika typer. Lowercase och uppercase är en typisk
+     grej som skulle kunna vara med på en sån lista.
+
+  3. Viktigast är att testa normala värden och korrekta typer på parametrarna.
+
+3 Bank
+
+  DEPOSIT & WITHDRAW
+  1. Båda har testat: Normala värden, felaktiga objekt och endast en inparameter,
+
+  2. Vi har missat att testa olika variabeltyper då det finns två parametrar.
+
+  3. Viktigast är att testa normala värden och korrekta objekt.
+
+  TRANSFER
+  1. Båda har testat: Normala värden, att skicka mer pengar än vad som finns, undefined konto.
+
+  2. Vi har missat att testa variabeltyper på amount och att testa så att objekten är korrekt utformade även här.
+
+  3. Viktigast är att även testa normala värden och korrekta objekt, något vi missat här.
